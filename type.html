@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Type anthing slowly</h2>
+<form name="f">
+       <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();">
+
+       </textarea>
+</form>
+
+<script>
+    var a = " Họ gọi tôi là\n" +
+        "Chú bé loắt choắt\n" +
+        "Chú bé loắt choắt\n" +
+        "\n" +
+        "[Ver 1:]\n" +
+        "Chú có một túi mơ to\n" +
+        "Chú đựng bo bo những khi còn bé\n" +
+        "Trên vai là bạn sáo nhỏ\n" +
+        "Thích hót líu lo những khi chiều hè\n" +
+        "Chú có những ngày rong ruổi\n" +
+        "Đôi chân trần cái xắc xinh xinh\n" +
+        "Đầu đội trời chân thì đạp đất\n" +
+        "Đứng giữa cánh đồng nắng chói lung linh\n" +
+        "Tôi là chú bé loắt choắt\n" +
+        "Cảm thấy mình thật nhỏ tí teo\n" +
+        "Băng qua biết bao vách núi\n" +
+        "Lội qua rừng muôn dòng suối reo\n" +
+        "Chú đi cho cuộc hành trình\n" +
+        "Con đường vàng, mồm huýt sáo vang\n" +
+        "Chú biết mình phải luôn cố gắng\n" +
+        "Cho những điều vẫn còn dở dang\n" +
+        "Hoàng hôn vẫn chưa kịp tắt\n" +
+        "Chân vẫn chạy lối đi ngoằn ngoèo\n" +
+        "Niềm tin là thứ duy nhất\n" +
+        "Giúp ta biết mình sẽ đi đường nào\n" +
+        "Vượt qua mặt trận , đạn bay vèo vèo\n" +
+        "Trong tay thư đề: Thượng khẩn!\n" +
+        "Chú cũng chẳng sợ rủi ro hiểm nghèo\n" +
+        "Chú vẫn cứ chạy và chạy, chạy đến khi nào không còn sức\n" +
+        "Chạy cho bữa cơm gia đình, cho những người mình yêu thương nhất\n" +
+        "Đôi chân vẫn cứ thoăn thoắt\n" +
+        "Và đầu thì vẫn ngẩng cao\n" +
+        "Ngày mai là một ngày mới\n" +
+        "Chú muốn chinh phục những điều lớn lao.\n" +
+        "\n" +
+        "\"Chú bé chú bé loắt choắt\n" +
+        "Chú bé có cái xắc xinh xinh\n" +
+        "Họ gọi tôi là:\n" +
+        "Chú bé chú bé loắt choắt\n" +
+        "Chú bé có cái xắc xinh xinh\"\n" +
+        "(x3)\n" +
+        "\n" +
+        "[Ver 2:]\n" +
+        "Tôi biết có rất nhiều người đang trông đợi ngóng tin tôi\n" +
+        "Thanh xuân và tuổi trẻ, hãy sẵn sàng đứng lên thôi\n" +
+        "Ra trận và chiến đấu, cố lên nào chú lính chì\n" +
+        "Thanh niên trai tráng, sống cho đáng đấng nam nhi\n" +
+        "Thay vì chọn cách quay đầu, tôi sẽ tiến lên đằng trước\n" +
+        "Hy sinh sắc áo màu cờ, có trách nhiệm cho từng bước\n" +
+        "Tôi sẽ hoàn thiện hơn bản thân mình, cho những điều mình từng ước\n" +
+        "Một ngày sẽ bay xa, chắc chắn ta sẽ làm được\n" +
+        "Chú bé sẵn sàng nằm xuống, nếu như kẻ thù mình bao vây\n" +
+        "Chú cố gắng bằng mọi giá để lá thư này được trao tay\n" +
+        "Bóng dáng chú thấp thoáng nhấp nhô ở trên đồng\n" +
+        "Đường quê thật vắng vẻ, lúa trổ trời hừng đông\n" +
+        "Bỗng lèo một chớp đỏ\n" +
+        "Tất cả vạn vật đều lặng im\n" +
+        "Chú ghi công cho tổ quốc\n" +
+        "Những điều này khắc ghi vào tim\n" +
+        "Chú nằm trên cánh đồng lúa\n" +
+        "Tay ghì nắm chặt bông\n" +
+        "Lúa thơm mùi hương sữa\n" +
+        "Chú đi rồi có về không?\n" +
+        "Nên là tổ quốc ghi công!\n" +
+        "\n" +
+        "Chú bé chú bé loắt choắt\n" +
+        "Chú bé với cái xắc xinh xinh\n" +
+        "Nên là tổ quốc ghi công (x4)\n" +
+        "\n" +
+        "\"Chú bé chú bé loắt choắt\n" +
+        "Chú bé có cái xắc xinh xinh\n" +
+        "Họ gọi tôi là:\n" +
+        "Chú bé chú bé loắt choắt\n" +
+        "Chú bé có cái xắc xinh xinh\"";
+    var n = "";
+    function typeTextarea() {
+        var  t = document.f.txt.value;
+        var  j = t.length;
+        if (j > 0) {
+            for(var i=1 ; i <= j; i++) {
+                n = n + a[i];
+                if(i == a.length) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = "";
+        setTimeout("typeTextarea()", 1);
+    }
+</script>
+</body>
+</html>
