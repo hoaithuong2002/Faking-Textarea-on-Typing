@@ -13,7 +13,7 @@
 </form>
 
 <script>
-    var a = " Họ gọi tôi là\n" +
+    let a = " Họ gọi tôi là\n" +
         "Chú bé loắt choắt\n" +
         "Chú bé loắt choắt\n" +
         "\n" +
@@ -87,12 +87,12 @@
         "Họ gọi tôi là:\n" +
         "Chú bé chú bé loắt choắt\n" +
         "Chú bé có cái xắc xinh xinh\"";
-    var n = "";
+    let n = "";
     function typeTextarea() {
-        var  t = document.f.txt.value;
-        var  j = t.length;
+        let  t = document.f.txt.value;
+        let  j = t.length;
         if (j > 0) {
-            for(var i=1 ; i <= j; i++) {
+            for(let i=1 ; i <= j; i++) {
                 n = n + a[i];
                 if(i == a.length) {
                     document.f.txt.value = "";
